@@ -12,12 +12,6 @@ int incrementByVal(int num) {
     return num + 1;
 }
 
-// Custom type: Point
-typedef struct {
-    int x;
-    int y;
-} Point;
-
 
 void test_pass_by_reference() {
     int x = 5;
@@ -31,7 +25,6 @@ void test_pass_by_value() {
     assert(result == 6); // Assert the returned value is incremented
     assert(y == 5);      // Assert the original value remains unchanged
 }
-
 
 
 void run_test(void (*test_func)(), const char* test_name) {
