@@ -1,7 +1,7 @@
 # lab_4
 memory management using the C programming language
 
-# **Value and reference types. Garbage collector**
+# Value and reference types. Garbage collector
 
 **Value types**: the variables of these data types directly contain values. When we assign a value type to another variable, a copy of the value is created and changing the new variable doesn’t affect the original variable. 
 
