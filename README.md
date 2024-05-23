@@ -11,7 +11,7 @@ memory management using the C programming language
 
 There are value and reference types in C, but it doesn’t have reference types in the same way that is in higher-level languages. But in order to achieve similar behaviour there are pointers -  variables which contains the memory address of another variable which effectively allows it to reference another variables value. Also C doesn’t have garbage collector, instead of it there are memory management mechanisms like malloc() and free() functions. The free() is used to release memory when it’s no longer required, and the malloc() - to allocate memory dynamically during runtime. 
 
-**Stack and heap in C**
+## Stack and heap in C
 
 **Stack:**
 The stack has a fixed size limit, so when we declare variables on the stack, their memory is automatically reclaimed when they go out of scop
