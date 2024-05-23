@@ -14,11 +14,11 @@ There are value and reference types in C, but it doesn’t have reference types 
 ## Stack and heap in C
 
 **Stack:**
-The stack has a fixed size limit, so when we declare variables on the stack, their memory is automatically reclaimed when they go out of scop
-When we declare a variable inside a function, it's typically allocated on the stack
-Accessing variables on the stack is generally faster than accessing variables on the heap
+- The stack has a fixed size limit, so when we declare variables on the stack, their memory is automatically reclaimed when they go out of scop
+- When we declare a variable inside a function, it's typically allocated on the stack
+- Accessing variables on the stack is generally faster than accessing variables on the heap
 
 **Heap:**
-Memory allocation on the heap is dynamic, it means we can request memory at runtime
-The heap typically has more memory available compared to the stack, but it's not as fast for allocation and deallocation
-Accessing variables on the heap is slower than accessing variables on the stack due to the need for dynamic memory management.
+- Memory allocation on the heap is dynamic, it means we can request memory at runtime
+- The heap typically has more memory available compared to the stack, but it's not as fast for allocation and deallocation
+- Accessing variables on the heap is slower than accessing variables on the stack due to the need for dynamic memory management.
