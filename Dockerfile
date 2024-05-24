@@ -2,10 +2,8 @@ FROM gcc:latest
 
 WORKDIR /lab_4
 
-COPY value_reference_testing.c .
-COPY value_reference_testing.c .
+COPY lab_4/*.c ./
 
-RUN gcc -o value_reference_testing value_reference_testing.c
-RUN gcc -o stack_heap_testing stack_heap_testing.c
+RUN for file in *.c; do gcc -o "${file%.c}" "$file"; done
 
-CMD ["sh", "-c", "./value_reference_testing && ./stack_heap_testing"]
+CMD CMD ["sh", "-c", "./value_reference_testing && ./stack-heap_testing && ./malloc_free_testing"]
