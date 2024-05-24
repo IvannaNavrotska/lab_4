@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: gcc:latest
     
     steps:
     - name: Checkout code
