@@ -1,23 +1,25 @@
-name: Docker Container Tests
+name: Docker
 
 on:
   push:
     branches:
-      - main
-
+      -main
 jobs:
   build:
-    runs-on: ubuntu-latest
-    
+    runs-on: gcc:latest
     steps:
+    
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Login to Docker Hub
-      run: docker login -u ${{ secrets.ivannanavrotska }} -p ${{ secrets.wzd!k4w4YYM_RKw }}
+    - name: Login to DockerHub Registry
+      run: echo "${{secrets.wzd!k4w4YYM_RKw}}" | docker login -u "${{secrets.ivannanavrotska}}" --password-stdin
 
-    - name: Build Docker image
+    - name: docker build
       run: docker build -t c_memory_testing .
-      
-    - name: Run tests
+
+    - name: push image docker
+      run: docker push c_memory_testing
+
+    - name: run test in docker container
       run: docker run c_memory_testing
