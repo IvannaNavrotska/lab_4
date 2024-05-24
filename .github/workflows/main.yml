@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Login to DockerHub Registry
-      run: echo "${{secrets.wzd!k4w4YYM_RKw}}" | docker login -u "${{secrets.ivannanavrotska}}" --password-stdin
+      run: echo "${{secrets.wzdk4w4YYMRKw}}" | docker login -u "${{secrets.ivannanavrotska}}" --password-stdin
 
     - name: docker build
       run: docker build -t c_memory_testing .
