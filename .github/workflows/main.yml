@@ -17,7 +17,7 @@ jobs:
       uses: docker/login-action@v2
       with:
         username: "${{ secrets.ivannanavrotska }}"
-        password: "${{ secrets.wzd!k4w4YYM_RKw }}"
+        password: "${{ secrets.wzdk4w4YYM_RKw }}"
         
     - name: Build Docker image
       run: docker build -t c_memory_testing .
