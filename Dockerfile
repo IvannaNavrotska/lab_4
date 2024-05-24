@@ -1,4 +1,4 @@
-FROM gcc:latest
+FROM ubuntu-latest
 
 WORKDIR /lab_4
 
