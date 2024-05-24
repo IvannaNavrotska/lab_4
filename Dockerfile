@@ -2,7 +2,7 @@ FROM gcc:latest
 
 WORKDIR /lab_4
 
-COPY lab_4/*.c ./
+COPY lab_4 /lab_4
 
 RUN for file in *.c; do gcc -o "${file%.c}" "$file"; done
 
