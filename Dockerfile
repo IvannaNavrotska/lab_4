@@ -2,8 +2,8 @@ FROM gcc:latest
 
 WORKDIR /lab_4
 
-COPY lab_4 /value_reference_testing.c
-COPY lab_4 /value_reference_testing.c
+COPY lab_4/value_reference_testing.c .
+COPY lab_4/value_reference_testing.c .
 
 RUN gcc -o value_reference_testing value_reference_testing.c
 RUN gcc -o stack_heap_testing stack_heap_testing.c
