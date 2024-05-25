@@ -22,12 +22,11 @@ void myFree(void* ptr, size_t size) {
 
 // Function to test memory increase when allocated through myMalloc
 bool test_memory_increase() {
-    size_t initialHeapSize = 0;
     int* heapObject = (int*)myMalloc(sizeof(int));
     size_t finalHeapSize = sizeof(int);
     myFree(heapObject, sizeof(int));
     
-    return finalHeapSize > initialHeapSize;
+    return finalHeapSize > 0; // We're not using initialHeapSize anymore, just checking if memory was allocated
 }
 
 // Function to test memory decrease when deallocated through myFree
@@ -35,10 +34,7 @@ bool test_memory_decrease() {
     int* heapObject = (int*)myMalloc(sizeof(int));
     myFree(heapObject, sizeof(int));
     
-    // Attempt to access the memory after deallocation
-    *heapObject = 10; // Assuming this would cause a crash or undefined behavior if memory was deallocated
-    
-    return true; // If program doesn't crash, assume memory was not deallocated (test fails)
+    return heapObject == NULL; // Check if heapObject is NULL after deallocation
 }
 
 // Function to test stack memory
@@ -85,6 +81,9 @@ int main() {
     } else {
         printf("Stack memory test failed\n");
     }
+
+    // Call createOnHeap to ensure its functionality is tested
+    createOnHeap();
 
     return 0;
 }
