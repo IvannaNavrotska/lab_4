@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+// Function prototype
+void createOnStack();
+
 // Global variable to keep track of allocated memory size
 size_t allocatedMemory = 0;
 
